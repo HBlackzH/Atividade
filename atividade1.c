@@ -4,44 +4,56 @@ int main (){
 
   char nome[50];
   int idade;
-  int matricula;
+  char matricula[20];
   char endereco[100];
   char curso[50];
   int periodo;
   char disciplina[50];
   float mensalidade;
 
-  printf("Cadastro");
+  printf("          Cadastro          ");
 
-  printf("\n\nSeu nome: ");
-  fgets(nome,50,stdin);
-  printf("\nQual sua idade: ");
+  printf("\n Seu Nome: ");
+  fgets(nome, 50, stdin);
+  fflush(stdin);
+
+  printf("\n Qual sua idade: ");
   scanf("%d", &idade);
-  printf("\nSua Matricula: ");
-  scanf("%d", &matricula);
   fflush(stdin);
-  printf("\nSeu Endereco: ");
-  fgets(endereco,100,stdin);
-  printf("\nSeu curso: ");
-  fgets(curso,50,stdin);
-  printf("\nQual Periodo: ");
-  scanf("%d", &periodo);
+
+  printf("\n Sua Matricula: ");
+  fgets(matricula, 20, stdin);
   fflush(stdin);
-  printf("\nQual Disciplina: ");
+
+  printf("\n Seu Endereco: ");
+  fgets(endereco, 100, stdin);
+  fflush(stdin);
+
+  printf("\n Seu curso: ");
+  fgets(curso, 50, stdin);
+  fflush(stdin);
+
+  printf("\n Qual Periodo: ");
+  scanf("%i", &periodo);
+  fflush(stdin);
+
+  printf("\n Qual Disciplina: ");
   fgets(disciplina, 50, stdin);
-  printf("\nQuanto e sua Mensalidade: ");
+  fflush(stdin);
+
+  printf("\n Quanto e sua Mensalidade: ");
   scanf("%f", &mensalidade);
+  fflush(stdin);
 
-printf("\nCONFIRA SEU CADASTRO:");
-
-printf("\nSeu nome: %s", &nome);
-printf("\nSua idade: %d", idade);
-printf("\nSua matricula: %d", matricula);
-printf("\nSeu endereco: %s", &endereco);
-printf("\nSeu Curso: %s", curso);
-printf("\nSeu Periodo: %d", periodo);
-printf("\nSua Disciplina: %s", disciplina);
-printf("\nSua Mensalidade: %.2f", mensalidade);
+printf("\n     CONFIRA SEU CADASTRO:     ");
+printf("\n Seu nome: %s", nome);
+printf("\n Sua idade: %d", idade);
+printf("\n Sua matricula: %s", matricula);
+printf("\n Seu endereco: %s", endereco);
+printf("\n Seu Curso: %s", curso);
+printf("\n Seu Periodo: %i", periodo);
+printf("\n Sua Disciplina: %s", disciplina);
+printf("\n Sua Mensalidade: %.2f", mensalidade);
 
 
 }
